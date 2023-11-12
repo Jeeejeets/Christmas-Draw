@@ -1,0 +1,99 @@
+body {
+  font-family: Open Sans, Arial;
+  color: #1F1717;
+  background: #FCF5ED;
+  font-size: 16px;
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 1em;
+  line-height: 1.5;
+  text-align: justify
+}
+
+.center {
+  text-align: center;
+}
+
+.colored {
+  color: #CE5A67;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    text-align: left
+  }
+}
+
+.participants {
+  ul {
+    padding-left: 1.2rem;
+    list-style: none;
+    li::before {
+      content: '🎁 ';
+    }
+  }
+
+  .chose {
+    color: rgb(128, 128, 128);
+    &::before {
+      content: '🎅 ';
+    }
+    span {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.form {
+  h2 {
+    text-align: center;
+  }
+  .select-group {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 5rem;
+    label {
+      font-weight: bold;
+      text-align: center;
+    }
+    select {
+      height: 2rem;
+      font-size: 1.05rem;
+      border-radius: 5px;
+      background: 0;
+      border: #F4BF96 1px solid;
+      padding-left: 1rem;
+      text-align: center;
+    }
+  }
+  .button-group {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    input {
+      background: none;
+      width: 15rem;
+      height: 3rem;
+      border-radius: 5px;
+      border: #F4BF96 1px solid;
+      transition: 0.2s background;
+      &:hover {
+        background: #F4BF96;
+        cursor: pointer;
+      }
+
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.result {
+  pre {
+    white-space: pre-line;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: Arial;
+  }
+}

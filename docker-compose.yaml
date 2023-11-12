@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  server:
+    image: nginx:1.23
+    ports:
+      - "127.0.0.1:8001:8001"
+    volumes:
+      - ./fe/dist/:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+  api:
+    build:
+      context: be
+      dockerfile: Dockerfile
+    environment:
+      - GIN_MODE=release
